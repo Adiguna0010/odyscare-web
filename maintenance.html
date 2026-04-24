@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance & Service - ODYSCARE</title>
+  <meta name="description" content="Form maintenance mesin kopi dan konsultasi gratis dengan ODYSCARE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <div class="loading-screen">
+    <div class="coffee-loader">
+      <div class="coffee-steam"><div class="steam-line"></div><div class="steam-line"></div><div class="steam-line"></div>
+      <div class="coffee-cup"><div class="coffee-fill"></div>
+    </div>
+    <p class="loading-text">ODYSCARE<span class="loading-dots"></span></p>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-mug-hot"></i></div>
+        <span>ODYSCARE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="company-profile.html">Tentang Kami</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="sekolah-online.html">SekolahOnline</a></li>
+        <li><a href="maintenance.html" class="active">Maintenance</a></li>
+        <li><a href="partners.html">Mitra</a></li>
+        <li><a href="social.html">Kontak</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="maintenance.html" class="btn btn-outline" style="padding:10px 24px;font-size:0.8rem;">Service</a>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section style="padding:160px 0 80px;background:linear-gradient(135deg,#1a1a1a,#2C1810);text-align:center;">
+    <div class="container">
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2.5rem,5vw,4rem);color:var(--cream);margin-bottom:20px;">Maintenance & Service</h1>
+      <p style="color:var(--text-muted);font-size:1.1rem;max-width:600px;margin:0 auto;">Isi form di bawah untuk jadwal service atau konsultasi dengan tim teknisi kami.</p>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background:var(--bg-dark);">
+    <div class="container">
+      <div class="animate-on-scroll" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;">
+        <div>
+          <h2 style="font-family:var(--font-heading);color:var(--cream);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:20px;">Form Maintenance</h2>
+          <p style="color:var(--text-muted);font-size:1rem;line-height:1.7;margin-bottom:30px;">Tim kami akan menghubungi Anda dalam 1x24 jam setelah pengajuan.</p>
+          <form data-validate style="display:flex;flex-direction:column;gap:20px;">
+            <div class="form-success" style="display:none;background:rgba(39,174,96,0.15);border:1px solid rgba(39,174,96,0.3);color:#27ae60;padding:15px 20px;border-radius:10px;margin-bottom:10px;">
+              <i class="fas fa-check-circle"></i> Terima kasih! Permintaan Anda telah terkirim. Tim kami akan segera menghubungi Anda.
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Nama Lengkap *</label>
+              <input type="text" required style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);">
+              <span class="error-message" style="color:#e74c3c;font-size:0.8rem;margin-top:5px;display:block;"></span>
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Email *</label>
+              <input type="email" required style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);">
+              <span class="error-message" style="color:#e74c3c;font-size:0.8rem;margin-top:5px;display:block;"></span>
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Nomor WhatsApp *</label>
+              <input type="tel" required style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);">
+              <span class="error-message" style="color:#e74c3c;font-size:0.8rem;margin-top:5px;display:block;"></span>
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Jenis Mesin *</label>
+              <select required style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);">
+                <option value="">Pilih jenis mesin</option>
+                <option value="espresso">Espresso Machine</option>
+                <option value="grinder">Coffee Grinder</option>
+                <option value="roaster">Roaster</option>
+                <option value="brewing">Brewing Equipment</option>
+                <option value="other">Lainnya</option>
+              </select>
+              <span class="error-message" style="color:#e74c3c;font-size:0.8rem;margin-top:5px;display:block;"></span>
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Merek & Model</label>
+              <input type="text" style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);" placeholder="Contoh: La Marzocco Linea PB">
+            </div>
+            <div>
+              <label style="display:block;color:var(--cream);font-size:0.9rem;margin-bottom:8px;font-weight:500;">Keluhan / Permasalahan *</label>
+              <textarea required rows="4" style="width:100%;background:var(--bg-card);border:1px solid var(--border-color);border-radius:10px;padding:14px 18px;color:var(--text-light);font-size:0.95rem;outline:none;transition:var(--transition);resize:vertical;" placeholder="Jelaskan masalah mesin Anda..."></textarea>
+              <span class="error-message" style="color:#e74c3c;font-size:0.8rem;margin-top:5px;display:block;"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;padding:16px;">Kirim Permintaan <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+        <div>
+          <h2 style="font-family:var(--font-heading);color:var(--cream);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:20px;">Paket Layanan</h2>
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:30px;position:relative;">
+              <div style="position:absolute;top:-1px;right:30px;background:var(--gradient-gold);color:var(--primary-dark);padding:6px 16px;border-radius:0 0 10px 10px;font-size:0.8rem;font-weight:700;">POPULER</div>
+              <h3 style="color:var(--cream);font-size:1.3rem;margin-bottom:10px;">Paket Basic</h3>
+              <div style="color:var(--accent-gold);font-size:2rem;font-weight:700;margin-bottom:15px;">Rp 750.000<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/kunjungan</span></div>
+              <ul style="color:var(--text-muted);font-size:0.95rem;line-height:2;list-style:none;margin-bottom:25px;">
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Pembersihan & descaling</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Pengecekan komponen</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Kalibrasi dasar</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Laporan kondisi mesin</li>
+              </ul>
+              <a href="#" class="btn btn-outline" style="width:100%;">Pilih Paket</a>
+            </div>
+            <div style="background:var(--bg-card);border:2px solid var(--accent-gold);border-radius:16px;padding:30px;">
+              <h3 style="color:var(--cream);font-size:1.3rem;margin-bottom:10px;">Paket Premium</h3>
+              <div style="color:var(--accent-gold);font-size:2rem;font-weight:700;margin-bottom:15px;">Rp 1.500.000<span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/kunjungan</span></div>
+              <ul style="color:var(--text-muted);font-size:0.95rem;line-height:2;list-style:none;margin-bottom:25px;">
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Semua fitur Basic</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Overhaul komprehensif</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Ganti spare part (max 3 item)</li>
+                <li><i class="fas fa-check" style="color:var(--accent-gold);margin-right:10px;"></i>Garansi 3 bulan</li>
+              </ul>
+              <a href="#" class="btn btn-primary" style="width:100%;">Pilih Paket</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background:linear-gradient(to bottom,#1a1a1a,#242424);">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">FAQ</h2>
+      <p class="section-subtitle animate-on-scroll">Pertanyaan yang sering ditanyakan.</p>
+      <div class="animate-on-scroll" style="max-width:800px;margin:50px auto 0;display:flex;flex-direction:column;gap:15px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px 25px;">
+          <h4 style="color:var(--cream);font-size:1rem;margin-bottom:8px;"><i class="fas fa-question-circle" style="color:var(--accent-gold);margin-right:10px;"></i>Berapa lama waktu service?</h4>
+          <p style="color:var(--text-muted);font-size:0.95rem;">Service rutin biasanya memakan waktu 2-4 jam. Untuk overhaul komprehensif bisa 1-3 hari tergantung kondisi mesin.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px 25px;">
+          <h4 style="color:var(--cream);font-size:1rem;margin-bottom:8px;"><i class="fas fa-question-circle" style="color:var(--accent-gold);margin-right:10px;"></i>Apakah ada garansi?</h4>
+          <p style="color:var(--text-muted);font-size:0.95rem;">Ya, semua layanan kami dilengkapi garansi. Paket Basic garansi 1 bulan, Premium 3 bulan.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px 25px;">
+          <h4 style="color:var(--cream);font-size:1rem;margin-bottom:8px;"><i class="fas fa-question-circle" style="color:var(--accent-gold);margin-right:10px;"></i>Area mana saja yang dilayani?</h4>
+          <p style="color:var(--text-muted);font-size:0.95rem;">Kami melayani Jabodetabek secara on-site. Untuk luar kota bisa melalui pengiriman mesin ke workshop kami.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:20px 25px;">
+          <h4 style="color:var(--cream);font-size:1rem;margin-bottom:8px;"><i class="fas fa-question-circle" style="color:var(--accent-gold);margin-right:10px;"></i>Apakah bisa emergency service?</h4>
+          <p style="color:var(--text-muted);font-size:0.95rem;">Ya, kami menyediakan layanan darurat dengan hotline khusus. Biaya tambahan 25% untuk panggilan di luar jam kerja.</p>
+        </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom:20px;font-size:1.5rem;">
+            <div class="logo-icon" style="width:40px;height:40px;font-size:1.2rem;"><i class="fas fa-mug-hot"></i></div>
+            <span>ODYSCARE</span>
+          </a>
+          <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:25px;">Solusi terintegrasi untuk industri mesin kopi Indonesia.</p>
+          <div class="social-links">
+            <a href="social.html"><i class="fab fa-whatsapp"></i></a>
+            <a href="social.html"><i class="fab fa-instagram"></i></a>
+            <a href="social.html"><i class="fab fa-youtube"></i></a>
+            <a href="social.html"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        <div>
+          <h4 class="footer-title">Menu</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="company-profile.html">Tentang Kami</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="sekolah-online.html">SekolahOnline</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Layanan</h4>
+          <ul class="footer-links">
+            <li><a href="maintenance.html">Maintenance</a></li>
+            <li><a href="maintenance.html">Spare Part</a></li>
+            <li><a href="sekolah-online.html">Pelatihan</a></li>
+            <li><a href="partners.html">Mitra</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Kontak</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Jl. Kopi No. 123, Jakarta Selatan</p>
+          <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@odyscare.id</p>
+        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ODYSCARE. All rights reserved.</p>
+      </div>
+  </footer>
+
+  <div class="chat-widget">
+    <button class="chat-toggle" title="Chat Support"><i class="fas fa-comments"></i><span class="badge">1</span></button>
+    <div class="chat-box">
+      <div class="chat-header">
+        <div style="width:45px;height:45px;background:var(--primary-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><i class="fas fa-headset"></i></div>
+        <div class="chat-header-info"><h4>ODYSCARE Support</h4><p>Online</p></div>
+      <div class="chat-body">
+        <div class="chat-message received"><div class="message-bubble">Halo! Ada yang bisa kami bantu terkait maintenance mesin kopi Anda?</div>
+      </div>
+      <div class="chat-footer"><input type="text" placeholder="Ketik pesan..."><button title="Kirim"><i class="fas fa-paper-plane"></i></button></div>
+  </div>
+
+  <button class="scroll-top" title="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="cookie-consent">
+    <div class="cookie-content">
+      <p>Kami menggunakan cookie untuk meningkatkan pengalaman Anda. <a href="#">Kebijakan cookie</a></p>
+      <div class="cookie-btns">
+        <button class="btn btn-outline cookie-decline" style="padding:10px 24px;font-size:0.85rem;">Tolak</button>
+        <button class="btn btn-primary cookie-accept" style="padding:10px 24px;font-size:0.85rem;">Terima</button>
+      </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
