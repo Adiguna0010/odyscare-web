@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ODYSCARE — Solusi Mesin Kopi Profesional & Spare Part Premium</title>
+  <meta name="description" content="ODYSCARE menyediakan manufaktur spare part kustom mesin kopi berkualitas tinggi, maintenance profesional, dan solusi teknologi kopi IoT terbaik di Indonesia." />
+  <meta name="keywords" content="mesin kopi, maintenance mesin kopi, spare part kopi, sekolah kopi, iot mesin kopi, odyscare" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading">
+    <div class="loader-steam">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="loader-cup">
+      <div class="loader-fill"></div>
+    </div>
+    <div class="loader-saucer"></div>
+    <p class="loader-text">ODYSCARE</p>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="ODYSCARE Logo" />
+        ODYSCARE
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="company-profile.html">Tentang Kami</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="sekolah-online.html">SekolahOnline</a></li>
+        <li><a href="maintenance.html">Maintenance</a></li>
+        <li><a href="partners.html">Mitra</a></li>
+        <li><a href="social.html">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="maintenance.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-tools"></i> Service
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Beranda</a>
+    <a href="company-profile.html">Tentang Kami</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="sekolah-online.html">SekolahOnline</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="partners.html">Mitra</a>
+    <a href="social.html">Kontak</a>
+    <a href="maintenance.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">
+      <i class="fas fa-tools"></i> Jadwalkan Service
+    </a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Text -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Era Baru Maintenance & Part Mesin Kopi
+          </div>
+
+          <h1 class="hero-title">
+            Elevate Your<br>
+            <em>Coffee Business</em>
+          </h1>
+
+          <p class="hero-desc">
+            ODYSCARE memproduksi spare part kustom premium dan menyediakan layanan servis mesin espresso serta roaster bersertifikat demi performa puncak bisnis kopi Anda.
+          </p>
+
+          <div class="hero-actions">
+            <a href="maintenance.html" class="btn btn-primary">
+              <i class="fas fa-tools"></i> Jadwalkan Service
+            </a>
+            <a href="company-profile.html" class="btn btn-outline">
+              Kenali Kami
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="2500" data-suffix="+">0</span>
+              <span class="stat-lbl">Mesin Terlayani</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="150" data-suffix="+">0</span>
+              <span class="stat-lbl">Klien Puas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="98" data-suffix="%">0</span>
+              <span class="stat-lbl">Satisfaction Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="hero-visual">
+          <!-- Top-right floating card -->
+          <div class="float-card top-right" style="display:flex;align-items:center;gap:14px;">
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <p class="card-title">Respon Cepat</p>
+              <p class="card-sub">Layanan Darurat 24/7</p>
+            </div>
+          </div>
+
+          <!-- Main image -->
+          <div class="hero-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800"
+              alt="Professional Coffee Machine"
+            />
+          </div>
+
+          <!-- Bottom-left floating card -->
+          <div class="float-card bot-left" style="display:flex;align-items:center;gap:16px;">
+            <div>
+              <span style="font-family:var(--font-display);font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1;display:block;">
+                98%
+              </span>
+            </div>
+            <div>
+              <p class="card-title">Klien</p>
+              <p class="card-sub">Sangat Puas</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-cue">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== BRANDS ===================== -->
+  <section class="brands-bar">
+    <div class="container">
+      <p class="brands-label">Dipercaya Oleh Brand Kopi Terkemuka</p>
+      <div class="brands-row">
+        <div class="brand-item"><i class="fas fa-coffee"></i> Nusantara</div>
+        <div class="brand-item"><i class="fas fa-leaf"></i> GreenBean</div>
+        <div class="brand-item"><i class="fas fa-store"></i> BaristaHub</div>
+        <div class="brand-item"><i class="fas fa-fire"></i> RoastMaster</div>
+        <div class="brand-item"><i class="fas fa-mug-hot"></i> Kopiloka</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" style="background:var(--dark-2);">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label"><i class="fas fa-star"></i> Yang Kami Tawarkan</div>
+        <h2 class="section-title">Layanan Kami</h2>
+        <p class="section-sub">Solusi terintegrasi untuk kebutuhan perawatan mesin espresso, pembuatan spare part kustom, serta otomasi digital kopi Anda.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><i class="fas fa-tools"></i></div>
+          <h3>Maintenance Profesional</h3>
+          <p>Layanan perbaikan, pembersihan total (descaling), kalibrasi presisi, dan perawatan berkala oleh teknisi ahli.</p>
+          <a href="maintenance.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-icon-wrap"><i class="fas fa-cogs"></i></div>
+          <h3>Spare Part Kustom</h3>
+          <p>Kami memproduksi suku cadang khusus mesin espresso dan grinder kopi dengan material premium tahan lama.</p>
+          <a href="gallery.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-icon-wrap"><i class="fas fa-headset"></i></div>
+          <h3>Konsultasi Teknis</h3>
+          <p>Konsultasi gratis permasalahan mesin kopi Anda via WhatsApp call atau chat dengan tim teknisi kami.</p>
+          <a href="social.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal" style="transition-delay:0.3s">
+          <div class="service-icon-wrap"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Pelatihan Teknisi</h3>
+          <p>Program sertifikasi dan pengajaran reparasi mesin espresso dari dasar hingga tingkat lanjut (IoT & Smart Device).</p>
+          <a href="sekolah-online.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEKOLAH ONLINE ===================== -->
+  <section class="section sekolah-section">
+    <div class="container">
+      <div class="sekolah-grid">
+
+        <!-- Text side -->
+        <div class="reveal">
+          <div class="section-label"><i class="fas fa-graduation-cap"></i> Lab Imajinasi Teknologi</div>
+          <h2 class="section-title">
+            SekolahOnline<br>
+            <em class="gold">ODYSCARE</em>
+          </h2>
+          <p class="section-sub" style="margin-bottom:28px;">
+            Lebih dari sekadar mesin kopi. SekolahOnline adalah laboratorium imajinasi teknologi kami yang memadukan inovasi IoT, otomasi industri, dan coding perangkat cerdas untuk mesin kopi modern.
+          </p>
+
+          <div class="feature-tags">
+            <div class="feature-tag"><i class="fas fa-microchip"></i> IoT & Smart Device</div>
+            <div class="feature-tag"><i class="fas fa-robot"></i> Otomasi Industri</div>
+            <div class="feature-tag"><i class="fas fa-vr-cardboard"></i> Teknologi Immersive</div>
+            <div class="feature-tag"><i class="fas fa-code"></i> Arduino & Coding</div>
+          </div>
+
+          <a href="sekolah-online.html" class="btn btn-primary">
+            Jelajahi SekolahOnline <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card side -->
+        <div style="position:relative;" class="reveal" style="transition-delay:0.15s">
+          <div class="course-card">
+            <div class="course-header">
+              <div class="course-header-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <h4>Program Tersedia</h4>
+                <p>12 Kelas Aktif</p>
+              </div>
+            </div>
+            <div class="course-list">
+              <div class="course-row">
+                <span>IoT Coffee Brewing</span>
+                <span class="course-badge badge-new">Baru</span>
+              </div>
+              <div class="course-row">
+                <span>Machine Learning Basics</span>
+                <span class="course-badge badge-pop">Populer</span>
+              </div>
+              <div class="course-row">
+                <span>Arduino for Coffee Tech</span>
+                <span class="course-badge badge-def">12 Siswa</span>
+              </div>
+              <div class="course-row">
+                <span>Cloud Computing 101</span>
+                <span class="course-badge badge-def">8 Siswa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating stat top-left -->
+          <div class="card-stat tl">
+            <i class="fas fa-users" style="color:var(--gold);"></i>
+            <div>
+              <span style="color:var(--cream);font-weight:700;font-size:0.95rem;display:block;">500+</span>
+              <span style="color:var(--muted);font-size:0.72rem;">Alumni Aktif</span>
+            </div>
+          </div>
+
+          <!-- Floating badge bottom-right -->
+          <div class="card-stat br">
+            <span>Daftar Gratis!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY PREVIEW ===================== -->
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label"><i class="fas fa-images"></i> Portofolio</div>
+        <h2 class="section-title">Galeri Pekerjaan Kami</h2>
+        <p class="section-sub">Dokumentasi pengerjaan servis dan spare part kustom yang telah kami selesaikan untuk pelanggan.</p>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="espresso">Espresso Machine</button>
+        <button class="filter-btn" data-filter="grinder">Coffee Grinder</button>
+        <button class="filter-btn" data-filter="roaster">Roaster</button>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-cat="espresso">
+          <img src="https://images.unsplash.com/photo-1517914309578-2742d2f7525a?w=600&h=400&fit=crop" alt="Espresso Machine" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Espresso Machine</span>
+            <h4>La Marzocco Linea PB</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="grinder">
+          <img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?w=600&h=400&fit=crop" alt="Coffee Grinder" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Coffee Grinder</span>
+            <h4>Mazzer Robur S</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="espresso">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop" alt="Espresso Machine" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Espresso Machine</span>
+            <h4>Victoria Arduino Eagle One</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="roaster">
+          <img src="https://images.unsplash.com/photo-1525088553748-01d6e210e00b?w=600&h=400&fit=crop" alt="Roaster" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Roaster</span>
+            <h4>Probat L12</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="grinder">
+          <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=600&h=400&fit=crop" alt="Grinder" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Coffee Grinder</span>
+            <h4>Mahlkönig EK43</h4>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="espresso">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop" alt="Espresso Machine" loading="lazy" />
+          <div class="gallery-overlay">
+            <span>Espresso Machine</span>
+            <h4>Synesso Hydra MVP</h4>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;" class="reveal">
+        <a href="gallery.html" class="btn btn-outline">Lihat Semua Galeri <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT PREVIEW ===================== -->
+  <section class="section" style="background:var(--dark-2);">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image -->
+        <div class="about-img-wrap reveal">
+          <img
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop"
+            alt="ODYSCARE Workshop"
+            loading="lazy"
+          />
+          <div class="about-badge-img">
+            <span>5+</span>
+            <span>Tahun Pengalaman</span>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="reveal">
+          <div class="section-label"><i class="fas fa-building"></i> Tentang ODYSCARE</div>
+          <h2 class="section-title">
+            Spesialis Manufaktur Part<br>
+            <em class="gold">& Maintenance Kopi</em>
+          </h2>
+          <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-bottom:16px;">
+            ODYSCARE berdedikasi memecahkan masalah operasional kedai kopi di Indonesia dengan menciptakan suku cadang modifikasi berkualitas premium serta menyediakan jasa pemeliharaan berkala untuk menjaga umur pakai mesin kopi Anda.
+          </p>
+          <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-bottom:32px;">
+            Kami menggabungkan metode servis mekanikal dengan teknologi IoT modern (smart monitoring) untuk mendeteksi kerusakan sebelum mesin Anda benar-benar mati.
+          </p>
+
+          <div class="checklist">
+            <div class="check-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h5>Teknisi Bersertifikat</h5>
+                <p>Tim berpengalaman & terlatih</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h5>Garansi Layanan</h5>
+                <p>Jaminan pengerjaan & suku cadang</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h5>Respon Cepat</h5>
+                <p>Siap menangani masalah darurat</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <h5>Spare Part Presisi</h5>
+                <p>Diproduksi dengan bahan terbaik</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="company-profile.html" class="btn btn-primary">
+            Lihat Profil Lengkap <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section testi-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label"><i class="fas fa-heart"></i> Ulasan Klien</div>
+        <h2 class="section-title">Apa Kata Mereka</h2>
+        <p class="section-sub">Kepercayaan pemilik bisnis kopi adalah kebanggaan utama kami.</p>
+      </div>
+
+      <div class="testi-slider-wrap reveal">
+        <!-- Slide 1 -->
+        <div class="testi-slide active">
+          <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-body">
+            "Layanan maintenance ODYSCARE sangat profesional. Sejak bermitra dengan mereka, downtime mesin espresso di kedai kami berkurang drastis dan rasa kopi tetap konsisten."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">RK</div>
+            <div style="text-align:left;">
+              <h4>Rudi Kurniawan</h4>
+              <p>Owner, Kopi Senja</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testi-slide">
+          <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-body">
+            "Suku cadang kustom dari ODYSCARE presisi tinggi dan sangat tahan panas. Jauh lebih hemat dibanding harus memesan part import yang memakan waktu berminggu-minggu."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">AW</div>
+            <div style="text-align:left;">
+              <h4>Anita Wijaya</h4>
+              <p>Head Roaster, BeanCrafters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testi-slide">
+          <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="testi-body">
+            "Program SekolahOnline IoT Mesin Kopi sangat interaktif. Teknisi kami sekarang bisa memasang sistem automasi pemantauan suhu otomatis menggunakan Arduino sendiri!"
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">BP</div>
+            <div style="text-align:left;">
+              <h4>Bima Pratama</h4>
+              <p>Ops Manager, Excelso Cafe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-dots">
+        <button class="testi-dot active" data-idx="0"></button>
+        <button class="testi-dot" data-idx="1"></button>
+        <button class="testi-dot" data-idx="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section cta-section">
+    <div class="cta-bg-pattern"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="reveal">
+        <h2 class="cta-title">Mesin Kopi Anda Bermasalah?</h2>
+        <p class="cta-sub">
+          Jangan biarkan downtime merugikan omset kedai kopi Anda. Hubungi teknisi bersertifikat ODYSCARE sekarang untuk solusi perbaikan cepat dan suku cadang kustom berkualitas.
+        </p>
+        <div class="cta-actions">
+          <a href="maintenance.html" class="btn btn-primary" style="padding:15px 36px;font-size:0.95rem;">
+            <i class="fas fa-tools"></i> Jadwalkan Service
+          </a>
+          <a href="https://wa.me/6285175420692" target="_blank" rel="noopener noreferrer"
+             class="btn btn-outline" style="padding:15px 36px;font-size:0.95rem;">
+            <i class="fab fa-whatsapp"></i> Konsultasi WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="ODYSCARE Logo" />
+            ODYSCARE
+          </a>
+          <p>
+            Solusi perbaikan terpadu, manufaktur spare part kustom, serta otomasi digital mesin kopi di Indonesia.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/6285175420692" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="social.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="social.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="social.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="company-profile.html">Tentang Kami</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="sekolah-online.html">SekolahOnline</a></li>
+          </ul>
+        </div>
+
+        <!-- Layanan -->
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="maintenance.html">Servis Ringan</a></li>
+            <li><a href="maintenance.html">Overhaul Total</a></li>
+            <li><a href="gallery.html">Spare Part Kustom</a></li>
+            <li><a href="partners.html">Program Kemitraan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col footer-contact">
+          <h4>Kontak</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+          <p><i class="fas fa-phone"></i> +62 851-7542-0692</p>
+          <p><i class="fas fa-envelope"></i> info@odyscare.id</p>
+          <p><i class="fas fa-clock"></i> Senin – Sabtu: 08.00 – 18.00</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ODYSCARE. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING CHAT ===================== -->
+  <div class="chat-widget">
+    <div class="chat-box" id="chatBox">
+      <div class="chat-head">
+        <div class="chat-head-avatar"><i class="fas fa-headset"></i></div>
+        <div>
+          <h4>ODYSCARE Support</h4>
+          <p>● Online</p>
+        </div>
+      </div>
+      <div class="chat-body">
+        <div class="chat-msg">Halo! Ada yang bisa kami bantu terkait servis atau suku cadang kustom mesin kopi Anda? 😊</div>
+      </div>
+      <div class="chat-foot">
+        <input type="text" placeholder="Ketik pesan..." />
+        <button aria-label="Kirim"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <button class="chat-toggle" id="chatToggle" aria-label="Chat Support">
+      <i class="fas fa-comments"></i>
+      <span class="chat-badge">1</span>
+    </button>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Cookie Banner -->
+  <div class="cookie hidden" id="cookieBanner">
+    <p>
+      Kami menggunakan cookie untuk meningkatkan pengalaman Anda. Dengan melanjutkan, Anda menyetujui kebijakan cookie kami.
+    </p>
+    <div class="cookie-btns">
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Tolak</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Terima</button>
+    </div>
+  </div>
+
+  <!-- Global Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SekolahOnline — ODYSCARE</title>
+  <meta name="description" content="Bergabunglah dengan Lab Imajinasi Teknologi SekolahOnline ODYSCARE. Pelajari IoT, otomasi industri, mikrokontroler, dan coding untuk industri kopi modern." />
+  <meta name="keywords" content="sekolah online odyscare, iot kopi, kelas arduino jakarta, otomasi mesin kopi" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading">
+    <div class="loader-steam">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="loader-cup">
+      <div class="loader-fill"></div>
+    </div>
+    <div class="loader-saucer"></div>
+    <p class="loader-text">ODYSCARE</p>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="ODYSCARE Logo" />
+        ODYSCARE
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="company-profile.html">Tentang Kami</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="sekolah-online.html" class="active">SekolahOnline</a></li>
+        <li><a href="maintenance.html">Maintenance</a></li>
+        <li><a href="partners.html">Mitra</a></li>
+        <li><a href="social.html">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="maintenance.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-tools"></i> Service
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Beranda</a>
+    <a href="company-profile.html">Tentang Kami</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="sekolah-online.html" class="active">SekolahOnline</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="partners.html">Mitra</a>
+    <a href="social.html">Kontak</a>
+    <a href="maintenance.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">
+      <i class="fas fa-tools"></i> Jadwalkan Service
+    </a>
+  </div>
+
+  <!-- ===================== HERO SUBPAGE ===================== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label"><i class="fas fa-graduation-cap"></i> Lab Imajinasi Teknologi</div>
+        <h1 class="section-title">SekolahOnline <em class="gold">ODYSCARE</em></h1>
+        <p class="section-sub">
+          Program akselerasi kompetensi teknologi kopi. Pelajari IoT, sensor suhu, otomasi katup tekanan, cloud integration, dan pemrograman Arduino dari tingkat pemula hingga mahir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRAMS SECTION ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label"><i class="fas fa-book-open"></i> Kurikulum Pilihan</div>
+        <h2 class="section-title">Program Pembelajaran Kami</h2>
+        <p class="section-sub">Program kelas dirancang khusus untuk memadukan pemahaman kopi dengan rekayasa teknologi perangkat keras.</p>
+      </div>
+
+      <div class="services-grid" style="margin-top:48px;">
+        <!-- Program 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><i class="fas fa-microchip"></i></div>
+          <h3>Arduino for Coffee Tech</h3>
+          <p>Pelajari dasar elektronika, pembacaan sensor suhu (RTD/Thermocouple), kontrol pemanas (SSR), dan antarmuka LCD untuk mesin espresso.</p>
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <div class="service-icon-wrap"><i class="fas fa-wifi"></i></div>
+          <h3>IoT Coffee Brewing</h3>
+          <p>Mengintegrasikan ESP32 dengan aplikasi Blynk atau Web Dashboard untuk memantau data penyeduhan kopi (suhu, debit air, TDS) dari jarak jauh.</p>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <div class="service-icon-wrap"><i class="fas fa-robot"></i></div>
+          <h3>Otomasi & PLC Roaster</h3>
+          <p>Pemrograman automasi profil roasting menggunakan PLC sederhana atau Arduino Mega untuk mengontrol kecepatan putaran motor drum dan damper udara.</p>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="service-card reveal" style="transition-delay:0.3s">
+          <div class="service-icon-wrap"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud & Data Analytics</h3>
+          <p>Membaca tren data operasional beberapa mesin sekaligus di cloud server (AWS/Google Cloud) untuk mendeteksi degradasi performa mesin kopi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REGISTRATION FORM SECTION ===================== -->
+  <section class="section" style="background:var(--dark-2);">
+    <div class="container">
+      <div class="form-grid">
+        <!-- Form Info -->
+        <div class="reveal">
+          <div class="section-label"><i class="fas fa-user-plus"></i> Gabung Sekarang</div>
+          <h2 class="section-title">Pendaftaran Kelas Teknologi Kopi</h2>
+          <p style="color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:28px;">
+            Mulai langkah Anda sebagai Teknisi Kopi Modern masa kini. Isi formulir pendaftaran untuk mengajukan beasiswa atau pendaftaran mandiri. Kami menyediakan Hardware Kit lengkap yang akan dikirim langsung ke rumah Anda!
+          </p>
+
+          <div class="contact-info-wrap">
+            <div class="info-block">
+              <div class="info-icon"><i class="fas fa-box-open"></i></div>
+              <div class="info-text">
+                <h4>Termasuk Starter Kit Hardware</h4>
+                <p>Setiap siswa mendapat modul ESP32, Sensor Suhu DS18B20 presisi, Layar OLED, relay, kabel jumper, dan modul pendukung.</p>
+              </div>
+            </div>
+            <div class="info-block">
+              <div class="info-icon"><i class="fas fa-certificate"></i></div>
+              <div class="info-text">
+                <h4>Sertifikat Resmi Kelulusan</h4>
+                <p>Dapatkan sertifikasi profesional teknisi IoT industri kopi yang diakui oleh mitra distributor mesin kopi kami setelah lulus ujian proyek akhir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-card reveal" style="transition-delay:0.1s">
+          <form id="enrollForm">
+            <div class="form-group">
+              <label for="fullName">Nama Lengkap</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Masukkan nama Anda" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input type="email" id="email" class="form-control" placeholder="nama@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Nomor WhatsApp</label>
+              <input type="tel" id="phone" class="form-control" placeholder="Contoh: 08123456789" required />
+            </div>
+
+            <div class="form-group">
+              <label for="classOption">Pilih Program Kelas</label>
+              <select id="classOption" class="form-control" required>
+                <option value="" disabled selected>Pilih kelas yang Anda minati</option>
+                <option value="arduino-coffee">Arduino for Coffee Tech (Pemula)</option>
+                <option value="iot-brew">IoT Coffee Brewing (Menengah)</option>
+                <option value="roaster-automation">Otomasi & PLC Roaster (Lanjutan)</option>
+                <option value="cloud-analytics">Cloud & Data Analytics (Lanjutan)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="motivation">Motivasi Bergabung</label>
+              <textarea id="motivation" class="form-control" placeholder="Ceritakan singkat motivasi Anda belajar teknologi kopi..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:10px;">
+              <i class="fas fa-paper-plane"></i> Kirim Formulir Pendaftaran
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="ODYSCARE Logo" />
+            ODYSCARE
+          </a>
+          <p>
+            Solusi perbaikan terpadu, manufaktur spare part kustom, serta otomasi digital mesin kopi di Indonesia.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/6285175420692" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="social.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="social.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="social.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="company-profile.html">Tentang Kami</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="sekolah-online.html">SekolahOnline</a></li>
+          </ul>
+        </div>
+
+        <!-- Layanan -->
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="maintenance.html">Servis Ringan</a></li>
+            <li><a href="maintenance.html">Overhaul Total</a></li>
+            <li><a href="gallery.html">Spare Part Kustom</a></li>
+            <li><a href="partners.html">Program Kemitraan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col footer-contact">
+          <h4>Kontak</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+          <p><i class="fas fa-phone"></i> +62 851-7542-0692</p>
+          <p><i class="fas fa-envelope"></i> info@odyscare.id</p>
+          <p><i class="fas fa-clock"></i> Senin – Sabtu: 08.00 – 18.00</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ODYSCARE. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING CHAT ===================== -->
+  <div class="chat-widget">
+    <div class="chat-box" id="chatBox">
+      <div class="chat-head">
+        <div class="chat-head-avatar"><i class="fas fa-headset"></i></div>
+        <div>
+          <h4>ODYSCARE Support</h4>
+          <p>● Online</p>
+        </div>
+      </div>
+      <div class="chat-body">
+        <div class="chat-msg">Halo! Ingin bertanya tentang materi kelas, biaya belajar, atau pengiriman hardware kit? 😊</div>
+      </div>
+      <div class="chat-foot">
+        <input type="text" placeholder="Ketik pesan..." />
+        <button aria-label="Kirim"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <button class="chat-toggle" id="chatToggle" aria-label="Chat Support">
+      <i class="fas fa-comments"></i>
+      <span class="chat-badge">1</span>
+    </button>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Global Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
