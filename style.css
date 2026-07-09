@@ -948,13 +948,15 @@ button {
   cursor: pointer;
   aspect-ratio: 4 / 3;
 }
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
-.gallery-item:hover img {
+.gallery-item:hover img,
+.gallery-item:hover video {
   transform: scale(1.05);
 }
 .gallery-overlay {
@@ -982,6 +984,30 @@ button {
   color: var(--cream); 
   font-size: 1rem; 
   margin-top: 4px;
+}
+
+.video-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(11, 10, 10, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 5;
+  transition: all var(--transition);
+}
+.gallery-item:hover .video-badge {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
 }
 
 /* Lightbox Modal */

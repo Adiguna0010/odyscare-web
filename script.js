@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.innerHTML = `
       <div class="lightbox-close"><i class="fas fa-times"></i></div>
       <div class="lightbox-content">
-        <img id="lightboxImg" src="" alt="Lightbox View">
+        <img id="lightboxImg" src="" alt="Lightbox View" style="display:none;">
+        <video id="lightboxVideo" src="" controls style="display:none; max-width: 100%; max-height: 80vh; border-radius: var(--radius-sm); border: 1px solid var(--border); box-shadow: var(--shadow-dark);"></video>
         <div class="lightbox-caption">
           <h4 id="lightboxTitle"></h4>
           <p id="lightboxCat"></p>
@@ -177,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (lightbox) {
     const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxVideo = document.getElementById('lightboxVideo');
     const lightboxTitle = document.getElementById('lightboxTitle');
     const lightboxCat = document.getElementById('lightboxCat');
     const closeBtn = lightbox.querySelector('.lightbox-close');
@@ -184,11 +186,35 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
         const img = item.querySelector('img');
+        const video = item.querySelector('video');
         const overlaySpan = item.querySelector('.gallery-overlay span');
         const overlayH4 = item.querySelector('.gallery-overlay h4');
         
-        if (img && lightboxImg) {
+        // Reset both
+        if (lightboxImg) {
+          lightboxImg.src = '';
+          lightboxImg.style.display = 'none';
+        }
+        if (lightboxVideo) {
+          lightboxVideo.pause();
+          lightboxVideo.src = '';
+          lightboxVideo.style.display = 'none';
+        }
+
+        if (video && lightboxVideo) {
+          lightboxVideo.src = video.getAttribute('src');
+          lightboxVideo.style.display = 'block';
+          lightboxVideo.play().catch(err => console.log("Auto-play prevented: ", err));
+          
+          if (lightboxTitle && overlayH4) lightboxTitle.textContent = overlayH4.textContent;
+          if (lightboxCat && overlaySpan) lightboxCat.textContent = overlaySpan.textContent;
+          
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden'; // Kunci scroll layar utama
+        } else if (img && lightboxImg) {
           lightboxImg.src = img.src;
+          lightboxImg.style.display = 'block';
+          
           if (lightboxTitle && overlayH4) lightboxTitle.textContent = overlayH4.textContent;
           if (lightboxCat && overlaySpan) lightboxCat.textContent = overlaySpan.textContent;
           
@@ -201,6 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeLightbox = () => {
       lightbox.classList.remove('open');
       document.body.style.overflow = '';
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+      }
     };
 
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
