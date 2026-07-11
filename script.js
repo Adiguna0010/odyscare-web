@@ -528,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alertBox.style.zIndex = '1000';
         alertBox.style.fontWeight = '600';
         alertBox.style.fontSize = '0.9rem';
-        alertBox.innerHTML = `<i class="fas fa-paper-plane"></i> Data berhasil terkirim ke email & membuka WhatsApp...`;
+        alertBox.innerHTML = `<i class="fas fa-paper-plane"></i> Permintaan Anda berhasil kami terima! Tim ODYSCARE akan menghubungi Anda via WhatsApp/Email.`;
         
         document.body.appendChild(alertBox);
         
@@ -537,16 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
           alertBox.style.transition = 'opacity 0.5s ease';
           setTimeout(() => alertBox.remove(), 500);
         }, 4000);
-
-        // Arahkan ke WhatsApp
-        if (waMessage) {
-          const encodedText = encodeURIComponent(waMessage);
-          const waUrl = `https://wa.me/6285175420692?text=${encodedText}`;
-          // Buka di tab baru setelah jeda 1 detik agar user bisa melihat notifikasi berhasil terlebih dahulu
-          setTimeout(() => {
-            window.open(waUrl, '_blank');
-          }, 1000);
-        }
       })
       .catch(error => {
         console.error('Error submitting form:', error);
@@ -557,12 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = originalText;
           }, 3000);
         }
-        // Fallback: Langsung arahkan ke WhatsApp jika request HTTP gagal
-        if (waMessage) {
-          const encodedText = encodeURIComponent(waMessage);
-          const waUrl = `https://wa.me/6285175420692?text=${encodedText}`;
-          window.open(waUrl, '_blank');
-        }
+        alert('Maaf, terjadi kesalahan saat mengirim data. Silakan hubungi kami langsung via email di odyscareofficial@gmail.com atau WhatsApp di 0851-7542-0692.');
       });
     });
   });
