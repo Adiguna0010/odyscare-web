@@ -1,0 +1,9 @@
+{
+  "name": "odyscare-web",
+  "version": "1.0.0",
+  "description": "ODYSCARE Official Website",
+  "main": "index.html",
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}
