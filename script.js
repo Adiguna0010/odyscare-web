@@ -490,6 +490,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
       }
       
+      // Tambahkan CC ke email adigunanugrohoh3@gmail.com
+      formDataObj['_cc'] = 'adigunanugrohoh3@gmail.com';
+      
       // Kirim data ke Email menggunakan FormSubmit API secara asynchronous (AJAX)
       fetch('https://formsubmit.co/ajax/odyscareofficial@gmail.com', {
         method: 'POST',
