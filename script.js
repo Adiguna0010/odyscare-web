@@ -384,8 +384,126 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Memproses...`;
       }
       
-      // Simulasi delay pengiriman
-      setTimeout(() => {
+      const formId = form.id;
+      let waMessage = '';
+      let formDataObj = {
+        _subject: 'Website Form Submission'
+      };
+      
+      // Tentukan format pesan berdasarkan ID Form
+      if (formId === 'partnerForm') {
+        const partnerName = document.getElementById('partnerName').value;
+        const businessName = document.getElementById('businessName').value;
+        const partnerPhone = document.getElementById('partnerPhone').value;
+        const partnerTypeSelect = document.getElementById('partnerType');
+        const partnerTypeLabel = partnerTypeSelect.options[partnerTypeSelect.selectedIndex].text;
+        const businessAddress = document.getElementById('businessAddress').value;
+        const proposal = document.getElementById('proposal').value;
+        
+        waMessage = `Halo Admin ODYSCARE, saya ingin mengajukan kemitraan. Berikut data pengajuan saya:\n\n` +
+                    `- Nama Lengkap: ${partnerName}\n` +
+                    `- Nama Perusahaan/Bisnis: ${businessName}\n` +
+                    `- No. WhatsApp: ${partnerPhone}\n` +
+                    `- Program Kemitraan: ${partnerTypeLabel}\n` +
+                    `- Alamat Bisnis: ${businessAddress}\n` +
+                    `- Deskripsi Kerja Sama: ${proposal}`;
+                    
+        formDataObj = {
+          _subject: 'Pengajuan Kemitraan Baru - ODYSCARE',
+          'Nama Lengkap': partnerName,
+          'Nama Perusahaan / Bisnis': businessName,
+          'Nomor WhatsApp': partnerPhone,
+          'Program Kemitraan': partnerTypeLabel,
+          'Alamat Lengkap Bisnis': businessAddress,
+          'Deskripsi Kerja Sama': proposal
+        };
+      } else if (formId === 'bookingForm') {
+        const clientName = document.getElementById('clientName').value;
+        const cafeName = document.getElementById('cafeName').value || '-';
+        const clientPhone = document.getElementById('clientPhone').value;
+        const machineTypeSelect = document.getElementById('machineType');
+        const machineTypeLabel = machineTypeSelect.options[machineTypeSelect.selectedIndex].text;
+        const machineBrand = document.getElementById('machineBrand').value;
+        const serviceDate = document.getElementById('serviceDate').value;
+        const symptoms = document.getElementById('symptoms').value;
+        
+        waMessage = `Halo Admin ODYSCARE, saya ingin menjadwalkan servis mesin kopi. Berikut data pengajuan saya:\n\n` +
+                    `- Nama Lengkap: ${clientName}\n` +
+                    `- Nama Kedai Kopi: ${cafeName}\n` +
+                    `- No. WhatsApp: ${clientPhone}\n` +
+                    `- Jenis Mesin Kopi: ${machineTypeLabel}\n` +
+                    `- Merek & Tipe Mesin: ${machineBrand}\n` +
+                    `- Rencana Tanggal Servis: ${serviceDate}\n` +
+                    `- Keluhan/Deskripsi Kerusakan: ${symptoms}`;
+                    
+        formDataObj = {
+          _subject: 'Jadwal Service Baru - ODYSCARE',
+          'Nama Lengkap': clientName,
+          'Nama Kedai Kopi': cafeName,
+          'Nomor WhatsApp': clientPhone,
+          'Jenis Mesin Kopi': machineTypeLabel,
+          'Merek & Tipe Mesin': machineBrand,
+          'Rencana Tanggal Servis': serviceDate,
+          'Keluhan / Deskripsi': symptoms
+        };
+      } else if (formId === 'enrollForm') {
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const classOptionSelect = document.getElementById('classOption');
+        const classOptionLabel = classOptionSelect.options[classOptionSelect.selectedIndex].text;
+        const motivation = document.getElementById('motivation').value;
+        
+        waMessage = `Halo Admin ODYSCARE, saya ingin mendaftar SekolahOnline. Berikut data diri saya:\n\n` +
+                    `- Nama Lengkap: ${fullName}\n` +
+                    `- Alamat Email: ${email}\n` +
+                    `- No. WhatsApp: ${phone}\n` +
+                    `- Program Kelas: ${classOptionLabel}\n` +
+                    `- Motivasi Bergabung: ${motivation}`;
+                    
+        formDataObj = {
+          _subject: 'Pendaftaran SekolahOnline Baru - ODYSCARE',
+          'Nama Lengkap': fullName,
+          'Alamat Email': email,
+          'Nomor WhatsApp': phone,
+          'Program Kelas': classOptionLabel,
+          'Motivasi Bergabung': motivation
+        };
+      } else if (formId === 'contactForm') {
+        const contactName = document.getElementById('contactName').value;
+        const contactEmail = document.getElementById('contactEmail').value;
+        const contactSubject = document.getElementById('contactSubject').value;
+        const contactMessage = document.getElementById('contactMessage').value;
+        
+        waMessage = `Halo Admin ODYSCARE, saya ingin mengirimkan pesan/pertanyaan. Berikut detailnya:\n\n` +
+                    `- Nama Lengkap: ${contactName}\n` +
+                    `- Alamat Email: ${contactEmail}\n` +
+                    `- Subjek Pesan: ${contactSubject}\n` +
+                    `- Isi Pesan: ${contactMessage}`;
+                    
+        formDataObj = {
+          _subject: `Pesan Hubungi Kami: ${contactSubject} - ODYSCARE`,
+          'Nama Lengkap': contactName,
+          'Alamat Email': contactEmail,
+          'Subjek Pesan': contactSubject,
+          'Isi Pesan': contactMessage
+        };
+      }
+      
+      // Kirim data ke Email menggunakan FormSubmit API secara asynchronous (AJAX)
+      fetch('https://formsubmit.co/ajax/odyscareofficial@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formDataObj)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Email sent successfully:', data);
+        
+        // Update status tombol
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = `<i class="fas fa-check-circle"></i> Berhasil Terkirim!`;
@@ -410,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alertBox.style.zIndex = '1000';
         alertBox.style.fontWeight = '600';
         alertBox.style.fontSize = '0.9rem';
-        alertBox.innerHTML = `<i class="fas fa-paper-plane"></i> Permintaan Anda berhasil kami terima! Tim ODYSCARE akan menghubungi Anda via WhatsApp/Email.`;
+        alertBox.innerHTML = `<i class="fas fa-paper-plane"></i> Data berhasil terkirim ke email & membuka WhatsApp...`;
         
         document.body.appendChild(alertBox);
         
@@ -420,7 +538,32 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => alertBox.remove(), 500);
         }, 4000);
 
-      }, 1500);
+        // Arahkan ke WhatsApp
+        if (waMessage) {
+          const encodedText = encodeURIComponent(waMessage);
+          const waUrl = `https://wa.me/6285175420692?text=${encodedText}`;
+          // Buka di tab baru setelah jeda 1 detik agar user bisa melihat notifikasi berhasil terlebih dahulu
+          setTimeout(() => {
+            window.open(waUrl, '_blank');
+          }, 1000);
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<i class="fas fa-exclamation-circle"></i> Gagal Mengirim`;
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+          }, 3000);
+        }
+        // Fallback: Langsung arahkan ke WhatsApp jika request HTTP gagal
+        if (waMessage) {
+          const encodedText = encodeURIComponent(waMessage);
+          const waUrl = `https://wa.me/6285175420692?text=${encodedText}`;
+          window.open(waUrl, '_blank');
+        }
+      });
     });
   });
 
