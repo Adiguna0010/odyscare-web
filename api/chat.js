@@ -122,7 +122,7 @@ Aturan Penting dalam Menjawab:
         },
         generationConfig: {
           temperature: 0.7,
-          maxOutputTokens: 350
+          maxOutputTokens: 2000
         }
       })
     });
