@@ -300,10 +300,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Simulasi kirim pesan chat
+    // AI Assistant Chat Widget
     const chatInput = chatBox.querySelector('.chat-foot input');
     const chatSendBtn = chatBox.querySelector('.chat-foot button');
     const chatBody = chatBox.querySelector('.chat-body');
+    let chatHistory = [];
 
     const handleSend = () => {
       const text = chatInput.value.trim();
@@ -321,15 +322,65 @@ document.addEventListener('DOMContentLoaded', () => {
         chatInput.value = '';
         chatBody.scrollTop = chatBody.scrollHeight;
 
-        // Auto balasan setelah 1.5 detik
-        setTimeout(() => {
+        // Simpan pesan user ke riwayat chat
+        chatHistory.push({ role: 'user', message: text });
+        if (chatHistory.length > 10) chatHistory.shift();
+
+        // Tambah indikator pengetikan AI
+        const loader = document.createElement('div');
+        loader.className = 'chat-bubble-loader';
+        loader.innerHTML = '<span></span><span></span><span></span>';
+        chatBody.appendChild(loader);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // Panggil endpoint serverless AI
+        fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: text,
+            history: chatHistory
+          })
+        })
+        .then(res => res.json())
+        .then(data => {
+          loader.remove();
+
+          const replyText = data.reply || 'Maaf, terjadi kendala teknis saat memproses pesan Anda. Silakan hubungi kami via WhatsApp di 0851-7542-0692.';
+          
+          // Simpan balasan AI ke riwayat
+          chatHistory.push({ role: 'model', message: replyText });
+          if (chatHistory.length > 10) chatHistory.shift();
+
           const supportMsg = document.createElement('div');
           supportMsg.className = 'chat-msg';
           supportMsg.style.marginTop = '8px';
-          supportMsg.textContent = 'Terima kasih atas pesan Anda. Customer care kami akan segera menghubungi Anda kembali melalui WhatsApp/Email. Silakan hubungi kami langsung di 0851-7542-0692 untuk respon instan.';
+
+          // Sanitasi teks dan format markdown link ke HTML anchor secara aman
+          const formattedReply = replyText
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+            .replace(/\n/g, '<br>');
+
+          supportMsg.innerHTML = formattedReply;
           chatBody.appendChild(supportMsg);
           chatBody.scrollTop = chatBody.scrollHeight;
-        }, 1500);
+        })
+        .catch(err => {
+          loader.remove();
+          console.error('Chat error:', err);
+
+          const supportMsg = document.createElement('div');
+          supportMsg.className = 'chat-msg';
+          supportMsg.style.marginTop = '8px';
+          supportMsg.innerHTML = 'Maaf, terjadi kendala saat menghubungkan ke asisten AI. Silakan hubungi kami langsung via <a href="https://wa.me/6285175420692" target="_blank">WhatsApp (0851-7542-0692)</a>.';
+          chatBody.appendChild(supportMsg);
+          chatBody.scrollTop = chatBody.scrollHeight;
+        });
       }
     };
 
